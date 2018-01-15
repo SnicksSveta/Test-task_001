@@ -1,5 +1,6 @@
 const path = require("path");
 
+const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -30,7 +31,20 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: ["css-loader", "sass-loader"]
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true
+              }
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
         })
       },
       {
@@ -45,10 +59,20 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    }),
     new ExtractTextPlugin("styles.bundle.css"),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html"
     })
-  ]
+  ],
+
+  devtool: "inline-source-map",
+
+  devServer: {
+    contentBase: "./dist"
+  }
 };
