@@ -63,7 +63,10 @@ module.exports = {
       jQuery: "jquery",
       $: "jquery"
     }),
-    new ExtractTextPlugin("styles.bundle.css"),
+    new ExtractTextPlugin({
+      filename: "styles.bundle.css",
+      disable: process.env.NODE_ENV === "development"
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html"

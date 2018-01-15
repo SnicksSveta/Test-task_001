@@ -51,7 +51,7 @@
                                     <span class="login-block__credits">100 кредитов</span>
                                     <a href="#" class="navbar-link login-block__user">
                                         <img src="<%= require('./assets/images/user.png') %>" alt="">
-                                        <span class="dropdown-toggle sprite sprite-arrow-down-s-icon" data-toggle="toggle"></span>
+                                        <span class="dropdown-toggle sprite sprite-arrow-down-s-icon"></span>
                                     </a>
                                 </div>
                             </div>
@@ -112,10 +112,42 @@
         </div>
         <div class="search-results">
             <div class="container search-results__form-wrap">
-                <h2>Я ищу</h2>
+                <h2 class="text-center">Я ищу</h2>
                 <div class="search-results__form">
-                    <form action="post">
-                        <div class="col-md-6">
+                    <form action="post" class="search-filter row">
+                        <div class="search-filter__gender search-filter__item col-xs-12 col-md-3">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="search-filter__gender" data-toggle="dropdown">
+                                    Девушку
+                                    <span class="caret sprite sprite-arrow-down-b-icon"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="search-filter__gender">
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">Девушку</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">Парня</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="search-filter__location search-filter__item col-xs-12 col-md-3">
+                            <div class="custom-input">
+                                <input type="text" class="form-control">
+                                <span class="custom-input__clear"></span>
+                            </div>
+                        </div>
+
+                        <div class="search-filter__age search-filter__item col-xs-12 col-md-3">
+                            <div class="age-slider"></div>
+                        </div>
+
+                        <div class="search-filter__submit search-filter__item col-xs-12 col-md-3">
+                            <button type="submit" class="btn btn-primary">Найти</button>
+                        </div>
+
+                        <!-- <div class="col-md-6">
                             <div class="input-group">
                                 <input type="text" class="form-control">
                                 <div class="input-group-btn">
@@ -138,7 +170,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- /btn-group -->
                             </div>
                             <form class="navbar-form navbar-left" role="search">
                                 <div class="form-group">
@@ -149,7 +180,7 @@
                         </div>
                         <div class="col-md-6">
 
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
