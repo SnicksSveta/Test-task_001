@@ -1,5 +1,10 @@
+import "jquery";
+import "bootstrap-sass";
+
 import "./style.scss";
 
-console.log("Hello, world");
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
-[1, 2, 3].map(v => v ** 2);
+[(1, 2, 3)].map(v => v ** 2);

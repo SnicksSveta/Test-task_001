@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "reset-css": "^2.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
