@@ -219,7 +219,11 @@ body {
     background: $first-bg-color;
     padding: 27px 0 0;
     .search-results__form-wrap {
-      margin-bottom: 27px;
+      margin-bottom: 41px;
+      .label-for-item span {
+        font-size: 16px;
+        line-height: 3;
+      }
       h2 {
         margin: 0 0 43px;
         font-weight: 300;
@@ -243,7 +247,7 @@ body {
     .search-results__extended {
       .search-results__filter-more {
         margin-bottom: 0;
-        padding-bottom: 15px;
+        padding-bottom: 18px;
         .panel {
           box-shadow: none;
           background: $white-text;
@@ -259,7 +263,7 @@ body {
               content: "";
               position: absolute;
               left: 0;
-              top: 24px;
+              top: 26px;
               right: 0;
               height: 1px;
               width: 100%;
@@ -270,7 +274,9 @@ body {
               background: $white-text;
               padding: 0 15px;
               z-index: 2;
+              font-weight: 400;
               position: relative;
+              letter-spacing: 1px;
               span {
                 margin-left: 13px;
               }
