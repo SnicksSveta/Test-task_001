@@ -1,9 +1,11 @@
+@import "../variables";
 @import "~jquery-ui/themes/base/slider";
 
 .age-slider {
   position: absolute;
   top: 50%;
-  width: 100%;
+  left: ceil(($grid-gutter-width / 2));
+  right: floor(($grid-gutter-width / 2));
   margin-top: -1px;
   background: #dcdcdc;
   height: 1px;
