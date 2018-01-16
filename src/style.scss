@@ -194,7 +194,7 @@ $text-medium: 500;
       box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
       padding: 0;
       border: none;
-      margin: 0 0 20px;
+      margin: 0 0 25px;
       max-width: 270px;
 
       @media (max-width: $container-large-desktop) {
@@ -260,7 +260,9 @@ $text-medium: 500;
           position: absolute;
           bottom: 0;
           width: 100%;
-          display: flex;
+          display: table;
+          font-size: 13px;
+          text-align: center;
           margin-bottom: 0;
           background: linear-gradient(
             315deg,
@@ -271,17 +273,24 @@ $text-medium: 500;
             color: $white-text;
             width: 50%;
             text-align: center;
+            display: table-cell;
             padding: 9px 0;
             .sprite-star-empty,
             .sprite-star-pull {
-              left: -5px;
+              left: -10px;
               top: 2px;
               position: relative;
+              @media (max-width: $screen-lg) {
+                left: 0;
+              }
             }
             .sprite-mail-icon {
               position: relative;
-              left: -7px;
-              top: 3px;
+              left: -11px;
+              top: 2px;
+              @media (max-width: $screen-lg) {
+                left: -3px;
+              }
             }
             &:hover,
             &:focus {
