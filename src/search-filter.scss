@@ -70,6 +70,8 @@
       height: 50px;
       border: none;
       background: linear-gradient(135deg, #376cf8 0%, #4e92ff 100%);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
 
       &:hover {
         background: #376cf8;
