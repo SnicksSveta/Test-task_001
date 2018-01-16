@@ -217,24 +217,74 @@ body {
 
   .search-results {
     background: $first-bg-color;
-    padding: 27px 0;
-    h2 {
-      margin: 0 0 43px;
-      font-weight: 300;
-      color: #333;
-    }
-    .search-filter__gender .dropdown {
-      max-width: 170px;
-      button {
-        font-size: 16px;
+    padding: 27px 0 0;
+    .search-results__form-wrap {
+      margin-bottom: 27px;
+      h2 {
+        margin: 0 0 43px;
+        font-weight: 300;
         color: #333;
       }
+      .search-filter__gender .dropdown {
+        max-width: 170px;
+        button {
+          font-size: 16px;
+          color: #333;
+        }
+      }
+      .search-filter__location {
+        input {
+          padding: 0 0 9px;
+          font-size: 16px;
+          color: #333;
+        }
+      }
     }
-    .search-filter__location {
-      input {
-        padding: 0 0 9px;
-        font-size: 16px;
-        color: #333;
+    .search-results__extended {
+      .search-results__filter-more {
+        margin-bottom: 0;
+        padding-bottom: 15px;
+        .panel {
+          box-shadow: none;
+          background: $white-text;
+          text-align: center;
+          border: none;
+          .panel-heading {
+            position: relative;
+            background: $white-text;
+            font-size: 16px;
+            border: none;
+            padding: 15px 0;
+            &:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 24px;
+              right: 0;
+              height: 1px;
+              width: 100%;
+              z-index: 1;
+              background: #dcdcdc;
+            }
+            a {
+              background: $white-text;
+              padding: 0 15px;
+              z-index: 2;
+              position: relative;
+              span {
+                margin-left: 13px;
+              }
+            }
+            a:hover,
+            a:focus,
+            a:active {
+              text-decoration: none;
+            }
+          }
+          .panel-body {
+            border: none;
+          }
+        }
       }
     }
   }
