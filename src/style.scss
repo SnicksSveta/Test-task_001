@@ -138,18 +138,18 @@ $text-medium: 500;
   }
 
   .all-filter-results {
-    padding: 35px 0;
+    padding: 40px 0;
     .all-filter-results__tabs {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       button {
         color: $select-text;
         font-size: 16px;
         font-weight: $text-medium;
         background: transparent;
         border-color: $select-text;
-        padding: 5px 0;
+        padding: 6px 0;
         line-height: 1;
-        min-width: 133px;
+        min-width: 136px;
         &:focus,
         &:active,
         &:hover,
@@ -167,7 +167,7 @@ $text-medium: 500;
       box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
       padding: 0;
       border: none;
-      margin: 0 4px 20px;
+      margin: 0 0 20px;
       max-width: 270px;
 
       .thumbnail_top {
@@ -198,33 +198,38 @@ $text-medium: 500;
           .photos {
             position: absolute;
             background: rgba(0, 0, 0, 0.5);
-            top: 18px;
-            left: 13px;
+            top: 20px;
+            left: 15px;
             border-radius: 5px;
-            padding: 5px 10px;
+            padding: 6px 10px;
             line-height: 1;
             .count {
               color: #fff;
-              margin-left: 3px;
+              margin-left: 1px;
               bottom: 3px;
               position: relative;
             }
           }
           .top {
+            opacity: 0;
             text-transform: uppercase;
             position: absolute;
-            top: 18px;
-            right: 13px;
+            top: 20px;
+            right: 20px;
             background: #ff1e6c;
             border-radius: 5px;
             color: $white-text;
             padding: 5px 11px;
+          }
+          .top.active {
+            opacity: 1;
           }
         }
         p {
           position: absolute;
           bottom: 0;
           width: 100%;
+          display: flex;
           margin-bottom: 0;
           background: linear-gradient(
             315deg,
@@ -233,17 +238,38 @@ $text-medium: 500;
           );
           a {
             color: $white-text;
+            width: 50%;
+            text-align: center;
+            padding: 9px 0;
+            .sprite-star-empty {
+              left: -5px;
+              top: 2px;
+              position: relative;
+            }
+            .sprite-mail-icon {
+              position: relative;
+              left: -7px;
+              top: 3px;
+            }
+            &:hover,
+            &:focus {
+              text-decoration: none;
+            }
+          }
+          .mail_link {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
           }
         }
       }
       .caption {
-        padding: 15px 20px;
+        padding: 13px 20px 16px;
         text-align: left;
         h3 {
           font-size: 18px;
           color: $select-text;
           font-weight: $text-medium;
-          margin: 0 0 5px;
+          margin: 0 0 2px;
+          letter-spacing: 0.7px;
           .online {
             opacity: 0;
             width: 10px;
@@ -260,6 +286,7 @@ $text-medium: 500;
         }
         p {
           margin-bottom: 0;
+          letter-spacing: 0.7px;
         }
       }
     }
