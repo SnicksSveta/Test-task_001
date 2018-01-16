@@ -12,6 +12,10 @@ $light-text: #777;
 $white-text: #fff;
 $text-medium: 500;
 
+body {
+  min-width: 320px;
+}
+
 /* header */
 
 .header {
@@ -20,9 +24,45 @@ $text-medium: 500;
     min-height: 80px;
     .navbar-collapse {
       margin-right: -15px;
+      @media (max-width: $screen-sm) {
+        text-align: center;
+      }
     }
-    .navbar-brand {
-      padding: 23px 30px 0 0;
+    .navbar-toggle {
+      position: absolute;
+      float: none;
+      top: 25px;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      color: #366cf7;
+      font-size: 16px;
+      font-weight: 500;
+      .icon-bar {
+        background: #366cf7;
+        width: 30px;
+        height: 3px;
+      }
+    }
+    .navbar-toggle .icon-bar + .icon-bar {
+      margin-top: 6px;
+    }
+    .navbar-header {
+      .navbar-brand {
+        padding: 23px 30px 0 0;
+        @media (max-width: $screen-sm) {
+          padding: 23px 0 0 0;
+          float: none;
+          display: block;
+          img {
+            margin: 0 auto;
+          }
+        }
+      }
+      @media (max-width: $screen-md) {
+        float: none;
+      }
     }
     .nav {
       margin-top: 29px;
@@ -35,6 +75,25 @@ $text-medium: 500;
         &:focus {
           color: $select-text;
           transition: 0.4s;
+        }
+        @media (max-width: $screen-sm) {
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+      @media (max-width: $screen-md) {
+        margin: 20px 0;
+        display: table;
+        text-align: center;
+        width: 100%;
+        li {
+          display: table-cell;
+          float: none;
+        }
+      }
+      @media (max-width: $screen-sm) {
+        li {
+          display: block;
         }
       }
     }
@@ -50,12 +109,18 @@ $text-medium: 500;
           top: 2px;
           position: relative;
           cursor: pointer;
+          @media (max-width: 350px) {
+            margin-left: 5px;
+          }
         }
       }
       .login-block__credits {
         color: $select-text;
         font-weight: $text-medium;
         padding: 0 20px;
+        @media (max-width: 350px) {
+          padding: 0 5px;
+        }
       }
       .login-block__user {
         &:hover,
@@ -71,15 +136,25 @@ $text-medium: 500;
         }
         span {
           margin-left: 10px;
+          @media (max-width: 350px) {
+            margin-left: 5px;
+          }
         }
+      }
+      @media (max-width: $screen-md) {
+        position: absolute;
+        right: 15px;
+        top: 0;
+      }
+      @media (max-width: $screen-sm) {
+        margin: 20px 0;
+        position: relative;
+        right: 0;
       }
     }
     @media (max-width: $screen-lg) {
       .nav li + li {
         padding-left: 10px;
-      }
-      .nav li a {
-        font-size: 15px;
       }
     }
   }
