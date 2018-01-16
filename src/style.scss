@@ -168,6 +168,12 @@ $text-medium: 500;
     padding: 40px 0;
     .all-filter-results__tabs {
       margin-bottom: 30px;
+      @media (max-width: $screen-md) {
+        display: block;
+        overflow: hidden;
+        max-width: 410px;
+        margin: 0 auto 30px;
+      }
       button {
         color: $select-text;
         font-size: 16px;
@@ -186,6 +192,27 @@ $text-medium: 500;
           transition: 0.4s;
           background: $select-text;
           color: $white-text;
+        }
+        @media (max-width: $screen-sm) {
+          width: 33.333%;
+        }
+        @media (max-width: $screen-xs) {
+          min-width: auto;
+          width: 100%;
+          float: none;
+          margin-left: 0.2px;
+        }
+        &:first-child:not(:last-child):not(.dropdown-toggle) {
+          @media (max-width: $screen-xs) {
+            border-radius: 4px 4px 0 0;
+            margin-left: 0;
+          }
+        }
+        &:last-child:not(:first-child),
+        .btn-group > .dropdown-toggle:not(:first-child) {
+          @media (max-width: $screen-xs) {
+            border-radius: 0 0 4px 4px;
+          }
         }
       }
     }
