@@ -122,22 +122,25 @@ body {
           padding: 0 5px;
         }
       }
-      .login-block__user {
-        &:hover,
-        &:focus {
-          text-decoration: none;
-        }
-        img {
-          max-width: 40px;
-          max-height: 40px;
-          border-radius: 50%;
-          overflow: hidden;
-          margin-top: -2px;
-        }
-        span {
-          margin-left: 10px;
-          @media (max-width: 350px) {
-            margin-left: 5px;
+      .user-dropdown {
+        display: inline-block;
+        .login-block__user {
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+          img {
+            max-width: 40px;
+            max-height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-top: -2px;
+          }
+          span {
+            margin-left: 10px;
+            @media (max-width: 350px) {
+              margin-left: 5px;
+            }
           }
         }
       }
@@ -156,6 +159,11 @@ body {
       .nav li + li {
         padding-left: 10px;
       }
+    }
+  }
+  @media (max-width: $screen-md) {
+    .navbar-collapse {
+      overflow: visible;
     }
   }
 }

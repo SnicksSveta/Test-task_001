@@ -49,10 +49,24 @@
                                         <span class="sprite sprite-info-icon" data-toggle="tooltip" title="Всплывающая подсказка"></span>
                                     </span>
                                     <span class="login-block__credits">100 кредитов</span>
-                                    <a href="#" class="navbar-link login-block__user">
-                                        <img src="<%= require('./assets/images/user.png') %>" alt="">
-                                        <span class="dropdown-toggle sprite sprite-arrow-down-s-icon"></span>
-                                    </a>
+                                    <div class="dropdown user-dropdown">
+                                        <a href="#" class="navbar-link login-block__user dropdown-toggle" data-toggle="dropdown">
+                                            <img src="<%= require('./assets/images/user.png') %>" alt="">
+                                            <span class="dropdown-toggle sprite sprite-arrow-down-s-icon"></span>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#">Ссылка</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Инфо</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">Выйти</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.navbar-collapse -->
