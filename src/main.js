@@ -3,6 +3,8 @@ import "bootstrap-sass";
 
 import "./style.scss";
 
+import "./ageSlider/ageSlider";
+
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
 });

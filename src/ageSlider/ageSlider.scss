@@ -1,0 +1,49 @@
+@import '~jquery-ui/themes/base/slider';
+
+.age-slider {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -1px;
+  background: #dcdcdc;
+  height: 2px;
+
+  .ui-slider-handle {
+    width: 16px;
+    height: 16px;
+    top: -7px;
+    margin-left: -8px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #366cf7;
+      transition: height .2s, width .2s;
+    }
+
+    span {
+      position: absolute;
+      top: 100%;
+    }
+
+    &.ui-state-focus {
+      outline: 0;
+
+      &:before {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  .ui-slider-range {
+    background: #366cf7;
+  }
+}
