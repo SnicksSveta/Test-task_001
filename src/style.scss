@@ -89,11 +89,42 @@ $text-medium: 500;
       li {
         border-radius: 10px;
         -webkit-border-radius: 10px;
-        max-width: 140px;
-        max-height: 140px;
         overflow: hidden;
         a {
           display: block;
+          max-width: 140px;
+          max-height: 140px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      @media (max-width: 1200px) {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        li {
+          float: left;
+          width: 12.5%;
+          img {
+            max-width: 95%;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        li {
+          float: left;
+          width: 25%;
+          margin-bottom: 15px;
+          a {
+            margin: 0 auto;
+          }
+        }
+      }
+      @media (max-width: 450px) {
+        li {
+          width: 33.333%;
+          margin-bottom: 5px;
         }
       }
     }
@@ -135,6 +166,7 @@ $text-medium: 500;
       padding: 0;
       border: none;
       margin: 0 4px 20px;
+      max-width: 270px;
 
       .thumbnail_top {
         position: relative;
