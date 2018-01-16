@@ -22,14 +22,15 @@ $text-medium: 500;
       margin-right: -15px;
     }
     .navbar-brand {
-      padding: 25px 27px 0 0;
+      padding: 23px 30px 0 0;
     }
     .nav {
-      margin-top: 32px;
+      margin-top: 29px;
       li a {
         padding: 0;
         font-size: 16px;
         font-weight: $text-medium;
+        letter-spacing: 1px;
         &:hover,
         &:focus {
           color: $select-text;
@@ -38,14 +39,14 @@ $text-medium: 500;
       }
     }
     .nav li + li {
-      padding-left: 28px;
+      padding-left: 34px;
     }
     .login-block {
-      margin-top: 20px;
+      margin-top: 21px;
       .login-block__info {
         text-align: left;
         span {
-          margin-left: 5px;
+          margin-left: 10px;
           top: 2px;
           position: relative;
           cursor: pointer;
@@ -54,7 +55,7 @@ $text-medium: 500;
       .login-block__credits {
         color: $select-text;
         font-weight: $text-medium;
-        padding: 0 10px;
+        padding: 0 20px;
       }
       .login-block__user {
         &:hover,
@@ -66,9 +67,10 @@ $text-medium: 500;
           max-height: 40px;
           border-radius: 50%;
           overflow: hidden;
+          margin-top: -2px;
         }
         span {
-          margin-left: 5px;
+          margin-left: 10px;
         }
       }
     }
