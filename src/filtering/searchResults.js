@@ -2,9 +2,19 @@ import jQuery from 'jquery';
 import { Model } from '../model';
 
 function getSearchResultHtml() {
-  const { items } = Model;
+  const { items, currentPage, itemsOnPage } = Model;
 
   return items
+    .filter(function(item, index) {
+      if (index < currentPage * itemsOnPage) {
+        return false;
+      }
+      if (index > currentPage * itemsOnPage + (itemsOnPage - 1)) {
+        return false;
+      }
+
+      return true;
+    })
     .map(function(item) {
       return `
         <div class="col-sm-6 col-md-3">
@@ -48,10 +58,8 @@ function getSearchResultHtml() {
     .join('');
 }
 
-function buildSearchResults() {
+export function buildSearchResults() {
   const container = jQuery('.js-items-container');
 
   container.html(getSearchResultHtml());
 }
-
-buildSearchResults();

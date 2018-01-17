@@ -6,7 +6,6 @@ import './style.scss';
 import './ageSlider/ageSlider';
 import './sorting/sorting';
 import './filtering';
-import './filtering/searchResults';
 
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();

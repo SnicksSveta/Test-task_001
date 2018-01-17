@@ -1,5 +1,6 @@
 import jQuery from 'jquery';
 import { Model } from '../model';
+import { buildSearchResults } from './searchResults';
 
 function getPaginationHtml() {
   // const pagesCount = Model.pagesCount;
@@ -20,12 +21,12 @@ function getPaginationHtml() {
     </a>
 </li>
 `;
-  const paginationHtml = [...(new Array(pagesCount))] // spread
-    .map(function (v, index) {
+  const paginationHtml = [...new Array(pagesCount)] // spread
+    .map(function(v, index) {
       return `
 <li class="js-btn-page ${currentPage === index ? 'active' : ''}">
     <a href="#">${index + 1}</a>
-</li>`
+</li>`;
     })
     .join('');
 
@@ -37,7 +38,7 @@ function attachEvents() {
   const nextButton = jQuery('.search-pagination .js-btn-next a');
   const pageButtons = jQuery('.search-pagination .js-btn-page a');
 
-  prevButton.on('click', function (e) {
+  prevButton.on('click', function(e) {
     e.preventDefault();
 
     if (Model.currentPage > 0) {
@@ -45,7 +46,7 @@ function attachEvents() {
     }
   });
 
-  nextButton.on('click', function (e) {
+  nextButton.on('click', function(e) {
     e.preventDefault();
 
     if (Model.currentPage < Model.pagesCount - 1) {
@@ -53,8 +54,8 @@ function attachEvents() {
     }
   });
 
-  pageButtons.each(function (index, elem) {
-    jQuery(elem).on('click', function (e) {
+  pageButtons.each(function(index, elem) {
+    jQuery(elem).on('click', function(e) {
       e.preventDefault();
 
       if (index !== Model.currentPage) {
@@ -76,6 +77,8 @@ function changePage(page) {
   Model.currentPage = page;
 
   buildPagination();
+  buildSearchResults();
 }
 
 buildPagination();
+buildSearchResults();

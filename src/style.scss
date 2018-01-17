@@ -1,9 +1,9 @@
 /* Global */
-@import "~reset-css/reset.css";
-@import "bootstrap";
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic");
-@import "./search-filter";
-@import "./sprite";
+@import '~reset-css/reset.css';
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic');
+@import './search-filter';
+@import './sprite';
 
 $first-bg-color: #fff;
 $second-bg-color: #f0f0f0;
@@ -285,7 +285,7 @@ body {
             border: none;
             padding: 15px 0;
             &:before {
-              content: "";
+              content: '';
               position: absolute;
               left: 0;
               top: 26px;
@@ -391,9 +391,11 @@ body {
           position: relative;
           cursor: pointer;
           display: block;
+          height: 270px;
+          overflow: hidden;
 
           &:before {
-            content: "";
+            content: '';
             position: absolute;
             border-radius: 10px;
             background: rgba(55, 108, 248, 0.3);
@@ -458,9 +460,16 @@ body {
             text-align: center;
             display: table-cell;
             padding: 9px 0;
-            .sprite-star-empty,
-            .sprite-star-pull {
+            .sprite-star-empty {
               left: -10px;
+              top: 2px;
+              position: relative;
+              @media (max-width: $screen-lg) {
+                left: 0;
+              }
+            }
+            .sprite-star-pull {
+              left: -5px;
               top: 2px;
               position: relative;
               @media (max-width: $screen-lg) {

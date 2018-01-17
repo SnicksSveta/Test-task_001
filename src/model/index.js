@@ -1,6 +1,7 @@
 export const Model = {
   pagesCount: 6,
-  currentPage: 5,
+  currentPage: 0,
+  itemsOnPage: 4,
   items: [
     {
       id: 1,
