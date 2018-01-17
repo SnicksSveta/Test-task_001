@@ -1,11 +1,12 @@
-import "jquery";
-import "bootstrap-sass";
+import 'jquery';
+import 'bootstrap-sass';
 
-import "./style.scss";
+import './style.scss';
 
-import "./ageSlider/ageSlider";
-import "./sorting/sorting";
+import './ageSlider/ageSlider';
+import './sorting/sorting';
 import './filtering';
+import './filtering/searchResults';
 
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
